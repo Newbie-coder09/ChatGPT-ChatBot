@@ -1,6 +1,6 @@
 # ChatGPT-ChatBot
 
-Create a ChatBot in JAVA that uses ChatGPT's/OpenAi's API to retreive results.
+Create a ChatBot in JAVA that uses ChatGPT's/OpenAi's API to retreive results. This software requires JDK 1.8.0 or above.
 ## Basics:
 This ChatBot software is created by Ayush and it may contain many bugs as it's in initial stage of development. I, Ayush will keep updating it as required.
 
