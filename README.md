@@ -24,7 +24,6 @@ Generating or getting your very own API key is ver easy and handy to use this so
 ![Snapshot_2023-06-06_20-56-49](https://github.com/Newbie-coder09/ChatGPT-ChatBot/assets/119154806/8d146cfb-c718-46de-b37d-81b3103b96b9)
 ![Snapshot_2023-06-06_20-57-11](https://github.com/Newbie-coder09/ChatGPT-ChatBot/assets/119154806/ccfe3a7c-82e2-4345-8edf-e10ef1a0c836)
 
-
 ## Details about code:
 * The code is self explanatory.
 * Contact me on Telegram @SOUL_AYU if you need any help.
@@ -32,6 +31,12 @@ Generating or getting your very own API key is ver easy and handy to use this so
 ## Issues:
 * Gui sometime misbehaves.
 * It takes time to show the results.
+
+## Credits:
+### Library credits:
+OkHttp: com.squareup.okhttp3.
+### Service credits:
+ChatGPT's API Service: OpenAi
 
 ## Conclusion: 
 This program's UI is Amazing and the code is short as well. There are some limitations which are discussed above. You can get the code from here and Jar and Exe file from release section of this repo.
