@@ -9,6 +9,7 @@ ChatGPT is an artificial intelligence (AI) chatbot developed by OpenAI and relea
 
 ## Generating ChatGPT's/OpenAi's API key:
 Generating or getting your very own API key is ver easy and handy to use this software and code. To generate your very own API key, follow this tutorial:
+
 [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/XlSAO9Ff2Yk/0.jpg)](https://www.youtube.com/watch?v=XlSAO9Ff2Yk)
 
 ## Features:
