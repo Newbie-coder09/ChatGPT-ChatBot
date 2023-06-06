@@ -19,10 +19,13 @@ Generating or getting your very own API key is ver easy and handy to use this so
 * Result will get copied upon clicking on it.
 
 ## Screenshots:
-![Snapshot_2023-06-06_20-54-43](https://github.com/Newbie-coder09/ChatGPT-ChatBot/assets/119154806/3b902f6c-19a6-48a8-951f-7d58e9284dd7)
-![Snapshot_2023-06-06_20-55-16](https://github.com/Newbie-coder09/ChatGPT-ChatBot/assets/119154806/91f1ce5b-a0f3-4523-96f4-bce91ff5845d)
-![Snapshot_2023-06-06_20-56-49](https://github.com/Newbie-coder09/ChatGPT-ChatBot/assets/119154806/8d146cfb-c718-46de-b37d-81b3103b96b9)
-![Snapshot_2023-06-06_20-57-11](https://github.com/Newbie-coder09/ChatGPT-ChatBot/assets/119154806/ccfe3a7c-82e2-4345-8edf-e10ef1a0c836)
+<details>
+  <summary>Click here to view</summary>
+  <img src="https://github.com/Newbie-coder09/ChatGPT-ChatBot/assets/119154806/a44faeaa-c04a-475f-9355-865f75f7b422" name="Snapshot_2023-06-06_20-54-43">
+  <img src="https://github.com/Newbie-coder09/ChatGPT-ChatBot/assets/119154806/4227f66a-0765-46ef-9dc4-8c1b6fb1d59a" name="Snapshot_2023-06-06_20-55-16">
+  <img src="https://github.com/Newbie-coder09/ChatGPT-ChatBot/assets/119154806/f5cc7115-45ca-467d-9e62-97c6de126318" name="Snapshot_2023-06-06_20-56-49">
+  <img src="https://github.com/Newbie-coder09/ChatGPT-ChatBot/assets/119154806/f996892d-e559-424a-9ebb-2d4f1a443224" name="Snapshot_2023-06-06_20-57-11">
+</details>
 
 ## Details about code:
 * The code is self explanatory.
