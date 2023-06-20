@@ -219,6 +219,7 @@ public class MainBot extends JFrame implements ActionListener, KeyListener{
 		
         //FRAME
 		this.setTitle("ChatBot");
+		this.setIconImage(new ImageIcon("src/bot.jpg").getImage());
       	this.setLocationRelativeTo(null);
       	this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
       	this.setResizable(false);
