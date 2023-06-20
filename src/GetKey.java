@@ -85,7 +85,9 @@ public class GetKey extends JFrame implements ActionListener{
 		button[1].setBounds(90, 117, 100, 30);
 		
 		//FRAME
+		this.setTitle("API Key");
 		this.setLocationRelativeTo(null);
+		this.setIconImage(new ImageIcon("src/bot.jpg").getImage());
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setResizable(false);
 		this.setLayout(null);
