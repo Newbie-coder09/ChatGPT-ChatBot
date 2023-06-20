@@ -7,7 +7,7 @@ import java.util.concurrent.TimeUnit;
 import javax.swing.*;
 import okhttp3.*;
 
-public class MainBot extends JFrame implements ActionListener{
+public class MainBot extends JFrame implements ActionListener, KeyListener{
 	
 	private static final long serialVersionUID = 1L;
 	JLabel label = new JLabel("<html>Your query will be visible here.</html>", SwingConstants.LEFT);
@@ -70,7 +70,8 @@ public class MainBot extends JFrame implements ActionListener{
             Response response = client.newCall(request).execute();
             if (response.isSuccessful()) {
                 String responseBody = response.body().string();
-                responseBody = responseBody.substring(responseBody.indexOf("content")+10, responseBody.indexOf("finish")-4);
+                System.out.println(responseBody);
+                responseBody = responseBody.substring(responseBody.indexOf("content")+10, responseBody.indexOf("finish_reason")-17);
                 String words[]=responseBody.split("\\s");
                 int length=210, count =0;
                 for (int i = 0; i < words.length; i++)
@@ -94,7 +95,7 @@ public class MainBot extends JFrame implements ActionListener{
                 }
                 
                 label2.setText("<html>" + responseBody.replaceAll("<","&lt;").replaceAll(">", "&gt;").replaceAll("\n", " <br> ").replaceAll("\\\\n", " <br> ").replaceAll("\\\\", "").replaceAll("    ", "&emsp;") + "</html>");
-                
+                System.out.println(label2.getText());
             } else {
             	String resp = response.body().string();
                 if(resp.contains("You exceeded your current quota, please check your plan and billing details.")) {
@@ -131,6 +132,17 @@ public class MainBot extends JFrame implements ActionListener{
         } catch (IOException e) {
 			e.printStackTrace();
 		}
+	}
+	
+	public void search() {
+		internetCheck();
+		label.setText("<html>" + field.getText().replaceAll("<","&lt;").replaceAll(">", "&gt;").replaceAll("\n", "<br/>") + "</html>");
+		label2.setText("<html>" +  "Fetching ChatGPT's response to your query." + "</html>");
+		label2.setPreferredSize(new Dimension(250, 175));
+		scroller.getViewport().setViewPosition(new Point(0,0));
+		super.paintAll(getGraphics());
+		getResponse(field.getText());
+		field.setText("");
 	}
 	
 	MainBot(){
@@ -175,7 +187,8 @@ public class MainBot extends JFrame implements ActionListener{
 	            StringSelection selection = new StringSelection(resp.replaceAll(" <br> ", "\n").replaceAll("<br>&emsp;", "\n    ").replaceAll("&emsp;", "    "));
 	            Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
 	            clipboard.setContents(selection, selection);
-	            label.setText("<html>"+label.getText().replace("<html>", "").replace("</html>", "")+"(Response copied to clipboard)"+"</html>");
+	            if(!label.getText().contains("(Response copied to clipboard)"))
+	            	label.setText("<html>"+label.getText().replace("<html>", "").replace("</html>", "")+"(Response copied to clipboard)"+"</html>");
             }
 
         });
@@ -213,21 +226,27 @@ public class MainBot extends JFrame implements ActionListener{
       	this.setSize(new Dimension(335,400));
       	this.getContentPane().setBackground(Color.WHITE);
       	this.setVisible(true);
+      	field.addKeyListener(this);
       	
 	}
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		internetCheck();
-		if(e.getSource()==button[0]) {
-			label.setText("<html>" + field.getText().replaceAll("<","&lt;").replaceAll(">", "&gt;").replaceAll("\n", "<br/>") + "</html>");
-			label2.setText("<html>" +  "Fetching ChatGPT's response to your query." + "</html>");
-			label2.setPreferredSize(new Dimension(250, 175));
-			scroller.getViewport().setViewPosition(new Point(0,0));
-			super.paintAll(getGraphics());
-			getResponse(field.getText());
-			field.setText("");
+		search();
+	}
+	
+	@Override
+	public void keyTyped(KeyEvent k) {
+	}
+
+	@Override
+	public void keyPressed(KeyEvent k) {
+		if(k.getKeyCode() == KeyEvent.VK_ENTER && !field.getText().equals("")) {
+		      search();
 		}
-		
+	}
+
+	@Override
+	public void keyReleased(KeyEvent k) {	
 	}
 }
